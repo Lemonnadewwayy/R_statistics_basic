@@ -1,0 +1,33 @@
+基础知识
+条形图 barplot
+饼图 pie
+扇形图 fan.plot
+直方图 hist
+核密度图 plot(density(x))
+箱线图 barplot
+茎叶图 steam.leaf
+散点图 plot().ggscatterhist()
+散点图矩阵 plot().ScatterplotMatrix
+相关系数矩阵 congram()
+3D散点图 cloud()
+气泡图 symbols()
+轮廓图 Plot Lines A()
+雷达图 gg Radar()
+折线图 gg plot()+geom-line()
+
+茎叶图 
+library(aplpack)
+stem.leaf("数据",unit=1,m=1)
+#m=1表示茎重复出现的次数，数据较多时，茎可以出现多次
+案例：
+data("faithful")
+attach(faithful)
+library(aplpack)
+stem.leaf(faithful$eruptions,unit=0.1,m=2)
+title("(4)Stem-and-leaf plot of eruptions")
+detach(faithful)
+
+背靠背茎叶图
+library(aplpack)
+stem.leaf.backback("数据1","数据2",back.to.back=True)
+back.to.back 默认为True
