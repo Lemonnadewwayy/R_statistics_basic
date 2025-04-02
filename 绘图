@@ -1,21 +1,37 @@
 基础知识
-条形图 barplot
-饼图 pie
-扇形图 fan.plot
-直方图 hist
-核密度图 plot(density(x))
-箱线图 barplot
-茎叶图 steam.leaf
-散点图 plot().ggscatterhist()
-散点图矩阵 plot().ScatterplotMatrix
-相关系数矩阵 congram()
-3D散点图 cloud()
-气泡图 symbols()
-轮廓图 Plot Lines A()
-雷达图 gg Radar()
-折线图 gg plot()+geom-line()
+1.条形图 barplot
+2.饼图 pie
+3.扇形图 fan.plot
+4.直方图 hist
+5.核密度图 plot(density(x))
+6.箱线图 barplot
+7.茎叶图 steam.leaf
+8.散点图 plot().ggscatterhist()
+9.散点图矩阵 plot().ScatterplotMatrix
+10.相关系数矩阵 congram()
+11.3D散点图 cloud()
+12.气泡图 symbols()
+13.轮廓图 Plot Lines A()
+14.雷达图 gg Radar()
+15.折线图 gg plot()+geom-line()
 
-茎叶图 
+1.条形图 barplot
+一般用于比较不同类别数据的数量大小，不太适合展示连续型数据的分布状况。
+
+2.饼图 pie
+适合展示各部分占总体的比例关系
+
+3.扇形图 fan.plot
+
+4.直方图 hist
+
+5.核密度图 plot(density(x))
+
+6.箱线图 barplot
+主要用于展示数据的分布特征，如数据的中位数、四分位数、异常值等，不能很好地体现多个变量在不同样本间的相似性 。
+
+7.茎叶图 
+可以在展示数据分布的同时，保留原始数据信息，能清晰看到数据的分布形态、集中趋势等
 library(aplpack)
 stem.leaf("数据",unit=1,m=1)
 #m=1表示茎重复出现的次数，数据较多时，茎可以出现多次
@@ -31,3 +47,22 @@ detach(faithful)
 library(aplpack)
 stem.leaf.backback("数据1","数据2",back.to.back=True)
 back.to.back 默认为True
+
+8.散点图 plot().ggscatterhist()
+主要用于展示两个变量之间的关系，通过点的分布观察变量间的相关性，不适合研究多个变量间相似性。
+
+9.散点图矩阵 plot().ScatterplotMatrix
+
+10.相关系数矩阵 congram()
+
+11.3D散点图 cloud()
+
+12.气泡图 symbols()
+是在散点图基础上增加了气泡大小这一维度，用于展示三个变量之间的关系，并非用于研究变量间相似性。
+
+13.轮廓图 Plot Lines A()
+
+14.雷达图 gg Radar()
+也叫蛛网图，它将多个变量的数据以从中心点出发的坐标轴上的点来表示，再将这些点连接成多边形，能够直观地展示多个变量在不同样本间的相似性和差异
+
+15.折线图 gg plot()+geom-line()
