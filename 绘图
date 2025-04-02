@@ -24,7 +24,6 @@
 3.扇形图 fan.plot
 
 4.直方图 hist
-
 5.核密度图 plot(density(x))
 
 6.箱线图 barplot
